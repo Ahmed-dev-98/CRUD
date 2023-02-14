@@ -1,0 +1,7 @@
+body{
+    background-color: rgb(50, 46, 46);
+    color: white;
+}
+.table .td {
+    border-right:2px ;
+}

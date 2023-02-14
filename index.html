@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>CRUD</title>
+
+</head>
+<body>
+
+
+<div class="title text-center py-3">
+    <h1> CRUD System Mangment </h1>
+</div>
+<div class="form w-50 mx-auto" >
+<div class="inputs  mx-auto">
+    <label for="name" class="mb-1" > Product Name : </label>
+    <input type="text" class="form-control mb-3 "  name="" id="product-name" value="">
+    <p id="productNameErrorMsg" class=" d-none text-danger fw-bold">Product name is required</p>
+
+      </div>
+<div class="inputs  mx-auto">
+    <label for="name" class="mb-1" > Product Price : </label>
+    <input type="number" class="form-control mb-3"  name="" id="product-price">
+    <p id="productPriceErrorMsg" class=" d-none text-danger fw-bold">Product price is required</p>
+
+</div>
+<div class="inputs  mx-auto">
+    <label for="name" class="mb-1" > Product Category : </label>
+    <input type="text" class="form-control mb-3"  name="" id="product-category">
+    <p id="productCatErrorMsg" class=" d-none text-danger fw-bold">Product Category required</p>
+
+</div>
+
+<div class="inputs  mx-auto">
+    <label for="name" class="mb-1" > Product desc : </label>
+    <input type="text" class="form-control mb-3"  name="" id="product-desc">
+    <p id="productDescErrorMsg" class=" d-none text-danger fw-bold">Product Descreption is required</p>
+
+</div>
+
+<div class="inputs  mx-auto">
+    <label for="name" class="mb-1" > stock : </label>
+    <input type="number" class="form-control mb-3"  name="" id="stock">
+    <p id="productStockErrorMsg" class=" d-none text-danger fw-bold">Product stock is required</p>
+
+</div>
+
+
+
+<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog " style="top: 121px";>
+      <div class="modal-content bg-dark">
+        <div class="modal-body" id="modalBody">
+            <div class="text-center">
+                            <label for="" class="fs-5 mb-2 text-center">please enter amount of units : </label>
+
+            </div>
+        <input type="number" class="form-control  w-50 mx-auto" id="adding">
+        </div>
+        <div class="modal-footer border-0" id="modalbtn">
+
+
+        </div>
+      </div>
+    </div>
+  </div>  
+  <div class="modal fade " id="delexampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog " style="top: 121px";>
+      <div class="modal-content bg-dark">
+        <div class="modal-body" id="delmodalBody">
+        </div>
+        <div class="modal-footer border-0" id="delmodalbtn">
+
+
+        </div>
+      </div>
+    </div>
+  </div>  
+
+  
+
+<div class="add my-3 ">
+    <button class="btn btn-primary mb-3" id="addBtn" onclick="addProduct()">Add Product</button>
+    <p id="addproductErrorMsg" class=" d-none text-danger fw-bold fs-5"></p>
+
+</div>
+
+<div class="search d-flex justify-content-between my-4">
+    <input type="text"  placeholder="Search by Name " class="form-control me-2" onkeyup="search(this.value , this.id)" id="byName">
+    <input type="text"  placeholder="Search by Category " class="form-control ms-2" onkeyup="search(this.value , this.id)" id="byCategory">
+
+</div>
+</div>
+
+<div class="table-items w-75 mx-auto pb-5">
+    <table class="table text-white">
+        <thead class="text-center">
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Descreption</th>
+            <th>stock</th>
+            <th>update</th>
+            <th>delete</th>
+        </thead>
+        <tbody class=" text-center " id="productData">
+
+        </tbody>
+    </table>
+</div>
+
+<footer class="pt-5">
+  <div >
+    <p class="w-50 mx-auto text-center">copyrights by Ahmed Hassan</p>
+  </div>
+</footer>
+
+<script src="css/bootstrap.bundle.min.js"></script>
+<script src="./js/index.js">
+</script>
+</body>
+</html>
